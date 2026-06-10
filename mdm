@@ -21,16 +21,16 @@ select opt in "${options[@]}"; do
 	case $opt in
 	"Autoypass on Recovery")
 		echo -e "${GRN}Bypass on Recovery"
-		echo "0.0.0.0 deviceenrollment.apple.com" >>/Volumes/Macintosh\ HD/etc/hosts
-		echo "0.0.0.0 mdmenrollment.apple.com" >>/Volumes/Macintosh\ HD/etc/hosts
-		echo "0.0.0.0 iprofiles.apple.com" >>/Volumes/Macintosh\ HD/etc/hosts
+		echo "0.0.0.0 deviceenrollment.apple.com" >>/Volumes/Macintosh\ HD\ -\ Data/etc/hosts
+		echo "0.0.0.0 mdmenrollment.apple.com" >>/Volumes/Macintosh\ HD\ -\ Data/etc/hosts
+		echo "0.0.0.0 iprofiles.apple.com" >>/Volumes/Macintosh\ HD\ -\ Data/etc/hosts
         echo -e "${GREEN}Successfully blocked host / Thành công chặn host${NC}"
 		# echo "Remove config profile"
   	touch /Volumes/Data/private/var/db/.AppleSetupDone
-        rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
-	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+        rm -rf /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+	rm -rf /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+	touch /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+	touch /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
 	echo -e "${CYAN}------ Autobypass SUCCESSFULLY / Autobypass HOÀN TẤT ------${NC}"
 	echo -e "${CYAN}------ Exit Terminal , Reset Macbook and ENJOY ! ------${NC}"
 		break
@@ -44,10 +44,10 @@ select opt in "${options[@]}"; do
         break
         ;;
     "Disable Notification (Recovery)")
-        rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
-	rm -rf /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
-	touch /Volumes/Macintosh\ HD/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
+        rm -rf /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigHasActivationRecord
+	rm -rf /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordFound
+	touch /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigProfileInstalled
+	touch /Volumes/Macintosh\ HD\ -\ Data/var/db/ConfigurationProfiles/Settings/.cloudConfigRecordNotFound
 
         break
         ;;
